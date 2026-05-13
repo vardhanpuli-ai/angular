@@ -1,0 +1,18 @@
+<h2>{{title}}</h2>
+
+
+<ul>
+   @for (course of wishlistItems; track course.title) {
+     {{course.title}}
+    }
+  @for (course of courses; track course.title) {
+    <app-course-card [course]="course" (onEnroll) = "enroll($event)"  (onWishlist) = "wishlist($event)"> </app-course-card>
+
+  }
+</ul>
+
+
+
+
+
+
